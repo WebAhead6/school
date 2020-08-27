@@ -1,0 +1,35 @@
+<br />
+<br />
+<br />
+<div class="student">
+  <br />
+  <br />
+  <br />
+  <form method="post" action="/studentPost">
+    <div class="">
+      <div class="">
+        <div class="">
+
+          <select name="txtName" id="" value="">
+            {{#each data}}
+            <option value="{{id}}">
+              {{studentname}}
+            </option>
+            {{/each}}
+          </select>
+
+        </div>
+        <div class="">
+          <div class="">
+            <textarea name="txtMsg" class="" placeholder="Your Message *"
+              style="width: 100%; height: 150px;"></textarea>
+          </div>
+        </div>
+        <div class="">
+          <input type="submit" name="btnSubmit" class="btnContact" value="post to wall" />
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>
