@@ -81,7 +81,8 @@ exports.authenticate = async (req, res) => {
   
           res.cookie('access_token', token);
           console.log("hiiiii");
-          res.redirect('/');
+
+          res.redirect('/studentPage');
         });
       });
     } catch (error) {
@@ -92,3 +93,14 @@ exports.authenticate = async (req, res) => {
       });
     }
   };
+
+
+
+  exports.logout = (req, res, next) => {
+    res.clearCookie('access_token');
+  
+    res.redirect('/');
+  
+    next();
+  };
+  
